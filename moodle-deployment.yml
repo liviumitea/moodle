@@ -34,6 +34,8 @@ spec:
           name: moodle-storage
         - mountPath: /bitnami/moodledata
           name: moodledata-storage
+        links:
+          - mariadb:database
       volumes:
       - name: moodle-storage
         hostPath:
