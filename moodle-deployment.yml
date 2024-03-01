@@ -35,9 +35,9 @@ spec:
       volumes:
       - name: moodle-storage
         hostPath:
-          path: /data-nfs/moodle
+          path: /data-nfs/moodle/data
           type: Directory
       - name: moodledata-storage
         hostPath:
-          path: /data-nfs/moodle
+          path: /data-nfs/moodle/data
           type: Directory
