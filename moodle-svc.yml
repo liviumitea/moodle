@@ -9,7 +9,9 @@ spec:
   ports:
   - port: 8080
     targetPort: 8080
+    name: http
   - port: 8443
     targetPort: 8443
+    name: https
   selector:
     app: moodle
