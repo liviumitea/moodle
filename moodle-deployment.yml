@@ -40,16 +40,10 @@ spec:
         #   - mariadb:database
       volumes:
       - name: moodle-storage
-        persistentVolumeClaim:
-          claimName: mariadb-moodle-pvc
+        hostPath:
+          path: /data-nfs/moodle
+          type: Directory
       - name: moodledata-storage
-        persistentVolumeClaim:
-          claimName: mariadb-moodle-pvc
-      # - name: moodle-storage
-      #   hostPath:
-      #     path: /data-nfs/moodle
-      #     type: Directory
-      # - name: moodledata-storage
-      #   hostPath:
-      #     path: /data-nfs/moodle
-      #     type: Directory
+        hostPath:
+          path: /data-nfs/moodle
+          type: Directory
