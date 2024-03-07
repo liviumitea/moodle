@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: moodle
-        image: bitnami:4.1.4-debian-11-r36
+        image: bitnami/moodle:4.0.9
         env:
         - name: MOODLE_DATABASE_HOST
           value: mariadb
