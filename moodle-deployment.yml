@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: moodle
-        image: bitnami/moodle:4.0.9
+        image: treehouses/moodle:alpine-latest
         env:
         - name: MOODLE_DATABASE_HOST
           value: mariadb
