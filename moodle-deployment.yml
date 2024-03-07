@@ -42,7 +42,7 @@ spec:
       - name: moodle-storage
         persistentVolumeClaim:
           claimName: mariadb-moodle-pvc
-      - name: /bitnami/moodledata
+      - name: moodledata-storage
         persistentVolumeClaim:
           claimName: mariadb-moodle-pvc
       # - name: moodle-storage
