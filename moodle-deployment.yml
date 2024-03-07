@@ -26,7 +26,7 @@ spec:
           value: "moodle"
         - name: MOODLE_DATABASE_NAME
           value: "moodle"
-        - name: MOODLE_DATABASE_PORT
+        - name: MOODLE_DATABASE_PORT_NUMBER
           value: "3306"
         ports:
         - containerPort: 8080
