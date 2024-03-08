@@ -16,16 +16,20 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: mariadb
+        image: bitnami/mariadb:latest
         env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: "moodle"
-        - name: MYSQL_DATABASE
-          value: "moodle"
+        - name: ALLOW_EMPTY_PASSWORD
+          value: yes
+        - name: MARIADB_USER
+          value: "bn_moodle"
+        - name: MARIADB_PASSWORD
+          value: "bitnami"
+        - name: MARIADB_DATABASE
+          value: "bitnami_moodle"        
         volumeMounts:
-        - mountPath: /var/lib/mysql
-          name: mariadb-storage
+        - mountPath: /bitnami/mariadb
+          name: mariadb_data
       volumes:
-      - name: mariadb-storage
+      - name: mariadb_data
         persistentVolumeClaim:
           claimName: mariadb-moodle-pvc

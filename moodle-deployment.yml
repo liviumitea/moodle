@@ -16,16 +16,14 @@ spec:
       - name: moodle
         image: treehouses/moodle:latest
         env:
-        - name: MOODLE_DATABASE_HOST
-          value: mariadb
-        - name: MOODLE_DATABASE_PORT_NUMBER
-          value : "3306"
+        - name: ALLOW_EMPTY_PASSWORD
+          value: yes
         - name: MOODLE_DATABASE_USER
-          value: "root"
+          value: bn_moodle
         - name: MOODLE_DATABASE_PASSWORD
-          value: "moodle"
+          value : bitnami
         - name: MOODLE_DATABASE_NAME
-          value: "moodle"
+          value: bitnami_moodle
         ports:
         - containerPort: 8080
         - containerPort: 8443
