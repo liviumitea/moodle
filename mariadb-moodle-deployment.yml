@@ -28,8 +28,8 @@ spec:
           value: "bitnami_moodle"        
         volumeMounts:
         - mountPath: /bitnami/mariadb
-          name: mariadb_data
+          name: mariadb-data
       volumes:
-      - name: mariadb_data
+      - name: mariadb-data
         persistentVolumeClaim:
           claimName: mariadb-moodle-pvc
