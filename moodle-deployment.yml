@@ -17,7 +17,7 @@ spec:
         image: treehouses/moodle:latest
         env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: yes
+          value: "yes"
         - name: MOODLE_DATABASE_USER
           value: bn_moodle
         - name: MOODLE_DATABASE_PASSWORD
