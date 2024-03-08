@@ -19,7 +19,7 @@ spec:
         image: bitnami/mariadb:latest
         env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: yes
+          value: "yes"
         - name: MARIADB_USER
           value: "bn_moodle"
         - name: MARIADB_PASSWORD
